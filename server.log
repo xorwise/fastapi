@@ -1,2 +1,0 @@
-{"client_ip": "127.0.0.1", "datetime": "2023-12-01T18:29:59.001476", "endpoint": "/api/v1/docs", "status_code": 200}
-{"client_ip": "127.0.0.1", "datetime": "2023-12-01T18:29:59.101983", "endpoint": "/openapi.json", "status_code": 200}
