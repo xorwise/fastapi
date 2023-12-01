@@ -1,6 +1,4 @@
-from .base import BaseModel
+from .base import BaseModel, Base
 from .foo import Foo
 
-metadata = [
-    Foo.metadata,
-]
+metadata = [model.metadata for model in Base.__subclasses__()]

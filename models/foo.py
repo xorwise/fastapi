@@ -8,4 +8,5 @@ class Foo(BaseModel):
 
     name = sa.Column(sa.String(200), nullable=False)
     description = sa.Column(sa.Text, nullable=True)
+    desc1 = sa.Column(sa.Text, nullable=True)
     public = sa.Column(sa.Boolean, default=True)
