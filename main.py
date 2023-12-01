@@ -12,7 +12,7 @@ app = FastAPI(docs_url="/api/v1/docs", version="1.0")
 app.include_router(foo.router, prefix=settings.path_prefix)
 
 app.add_exception_handler(AppException, app_exception_handler)
-app.add_middleware(logging_middleware)
+app.middleware("http")(logging_middleware)
 
 app.add_event_handler("startup", init_db)
 

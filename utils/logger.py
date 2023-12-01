@@ -16,7 +16,7 @@ async def logging_middleware(request: Request, call_next):
 
     log["status_code"] = response.status_code
 
-    with open(settings.lof_file, "a+") as file:
+    with open(settings.log_file, "a+") as file:
         file.write(json.dumps(log))
         file.write("\n")
 
