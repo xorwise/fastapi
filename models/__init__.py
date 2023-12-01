@@ -1,10 +1,6 @@
 import uuid
-from .foo import Foo, Foo1
-from sqlalchemy.orm import declarative_base
+from config.db import Base
 import sqlalchemy as sa
-
-
-Base = declarative_base()
 
 
 class BaseModel(Base):
