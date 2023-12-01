@@ -2,7 +2,7 @@ import json
 import datetime as dt
 from fastapi import Request, Response
 
-from config import settings
+from app.config import settings
 
 
 async def logging_middleware(request: Request, call_next):

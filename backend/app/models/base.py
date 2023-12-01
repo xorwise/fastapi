@@ -1,5 +1,5 @@
 import uuid
-from config.db import Base
+from app.config import Base
 import sqlalchemy as sa
 
 

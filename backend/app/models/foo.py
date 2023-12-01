@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 
-from models import BaseModel
+from app.models import BaseModel
 
 
 class Foo(BaseModel):

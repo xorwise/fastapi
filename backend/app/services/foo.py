@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 import uuid
-from models.foo import Foo
-from schemas.foo import FooIn
-from utils.exceptions import AppException
+from app.models import Foo
+from app.schemas import FooIn
+from app.utils.exceptions import AppException
 
 
 def create_foo(db: Session, data: FooIn) -> Foo:
