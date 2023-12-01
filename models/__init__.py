@@ -1,20 +1,6 @@
-import uuid
-from config.db import Base
-import sqlalchemy as sa
+from .base import BaseModel
+from .foo import Foo
 
-
-class BaseModel(Base):
-    __abstract__ = True
-
-    id = sa.Column(
-        "id",
-        sa.UUID(as_uuid=True),
-        primary_key=True,
-        default=uuid.uuid4,
-        index=True,
-    )
-
-    created_at = sa.Column("created_at", sa.TIMESTAMP, server_default=sa.func.now())
-    updated_at = sa.Column(
-        "updated_at", sa.TIMESTAMP, server_default=sa.func.now(), onupdate=sa.func.now()
-    )
+metadata = [
+    Foo.metadata,
+]

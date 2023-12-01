@@ -9,11 +9,3 @@ class Foo(BaseModel):
     name = sa.Column(sa.String(200), nullable=False)
     description = sa.Column(sa.Text, nullable=True)
     public = sa.Column(sa.Boolean, default=True)
-
-
-class Foo1(BaseModel):
-    __tablename__ = "foo1"
-
-    name = sa.Column(sa.String(200), nullable=False)
-    description = sa.Column(sa.Text, nullable=True)
-    public = sa.Column(sa.Boolean, default=True)
