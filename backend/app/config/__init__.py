@@ -1,15 +1,10 @@
-from pydantic_settings import BaseSettings
-from dotenv import load_dotenv
-
-load_dotenv(".env")
+from .default import settings
+from .utils import get_session, init_db, Base
 
 
-class Settings(BaseSettings):
-    path_prefix: str = "/api/v1"
-    database_url: str
-    celery_broker_url: str
-    celery_result_backend: str
-    log_file: str = "server.log"
-
-
-settings = Settings()
+__all__ = [
+    "get_session",
+    "settings",
+    "init_db",
+    "Base"
+]
